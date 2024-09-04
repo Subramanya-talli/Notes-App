@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/6332efefc1.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/Css/style.css">
+    <title>Notes-app</title>
+</head>
+
+<body>
+    <main>
+        <nav>
+            <a href="/users" class="web-title" >Take A Note</a>
+            
+        </nav>
+        <div class="left-container"></div>
+        <div class="right-container"></div>
+
+    </main>
+            <section class="container">
+            <a href="/users/new-note" class="new-note-btn">Add New Note</a>
+            <div class="all-notes">
+                <% notes.forEach((note)=>{ %>
+                    <div class="note">
+                        <div class="note-details">
+                            <h4>
+                                <%= note.title %>
+                            </h4>
+                            <div class="note-description">
+                                <p>
+                                    <%= note.description %>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="edit-delete-container">
+                            <a href="/users/note/<%= note._id %>" class="update-task-btn">Edit</a>
+                            <form action="/users/remove/<%= note._id %>?_method=DELETE" method="POST">
+                                <input type="hidden" name="_method" value="DELETE">
+                                <button type="submit" class="delete-btn">
+                                    Delete
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                <% }) %>
+            </div>
+        </section>
+</body>
+
+</html>

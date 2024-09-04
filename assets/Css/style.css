@@ -1,0 +1,356 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Nunito", sans-serif;
+    letter-spacing: 1px;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+body {
+    width: 100%;
+    background-color: #ffffff;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem;
+    font-weight: 600;
+}
+
+.nav-btn ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    justify-content: space-between;
+    text-decoration: none;
+}
+
+.nav-btn ul li {
+    margin-right: 2.5rem;
+    padding: 3px 10px;
+    font-size: 1.2rem;
+    border-radius: 20px;
+}
+
+.nav-btn ul li>a {
+    color: #3b3b3a;
+    letter-spacing: 2px;
+}
+
+
+.nav-btn ul li:hover {
+    background-color: hsla(60, 1%, 64%, 0.267);
+    color: #2028ff;
+}
+
+.web-title {
+    font-size: 1.4rem;
+    color: #3b3b3a;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.container {
+    margin: 3rem;
+}
+
+.new-note-btn {
+    margin-left: 2rem;
+    background-color: #ffee00;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+    border-radius: 3px;
+    padding: 0.5rem;
+    color: #303841;
+    font-weight: 600;
+}
+
+.new-note-btn:active {
+    background-color: #f8f398;
+    color: #000;
+}
+
+.all-notes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 2rem;
+}
+
+.note {
+    position: relative;
+    width: 430px;
+    height: 250px;
+    padding: 5px 15px;
+    border-radius: 5px;
+    background-color: #ffffff;
+    border: 2px solid #e0e0e096;
+    margin-bottom: 20px;
+    filter: blur(0px);
+    border-top: 3px solid #ffee00;
+}
+
+.note-details {
+    --max-lines: 6;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    -webkit-line-clamp: var(--max-lines);
+    min-height: 170px;
+}
+
+.note-details h4 {
+    margin-bottom: 1rem;
+    border-radius: 5px;
+}
+
+.update-btn,
+.log-out-btn,
+.create-btn,
+.log-out-btn,
+.update-task-btn {
+    background-color: #ffee00;
+    color: #303841;
+    font-weight: 600;
+    padding: 4px 8px;
+    width: 80px;
+    font-size: 15px;
+    border-radius: 3px;
+    letter-spacing: 1px;
+    border: none;
+}
+
+button:active,
+.update-btn:active,
+.log-out-btn:active,
+.create-btn:active,
+.log-out-btn:active,
+.update-task-btn:active {
+    background-color: #f1e45c;
+    color: #000;
+}
+
+
+.create-new-note {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.create-new-note input,
+.description {
+    width: 800px;
+    margin-bottom: 25px;
+    background-color: #ffffff;
+    border: 2px solid #d1d0d0;
+    font-weight: 600;
+    padding: 1rem;
+    color: #303841;
+    caret-color: #000000;
+    border-radius: 3px;
+}
+
+.create-new-note input {
+    height: 2rem;
+    font-size: 1.2rem;
+}
+
+.create-new-note .description {
+    height: 20rem;
+    font-size: 1rem;
+}
+
+.new-note-title,
+.update-note-title {
+    text-align: center;
+    color: #303841;
+    text-transform: capitalize;
+}
+
+.create-new-note input:focus,
+.description:focus {
+    outline: #000000;
+}
+
+.description:active {
+    top: -2rem;
+}
+
+.back-btn {
+    color: #f8f398;
+    background-color: #ffee00;
+    border-radius: 5px;
+    padding: 0.5rem;
+    color: #303841;
+    font-weight: 600;
+    margin: 5rem;
+    float: center;
+}
+
+.delete-btn {
+    opacity: 0;
+    border: none;
+    background-color: #ffee00;
+    color: #303841;
+    font-weight: 600;
+    padding: 4px 8px;
+    width: 80px;
+    font-size: 15px;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.edit-delete-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 2rem;
+}
+
+.update-task-btn {
+    opacity: 0;
+    text-align: center;
+}
+
+.note:hover .delete-btn {
+    opacity: 1;
+}
+
+.note:hover .update-task-btn {
+    opacity: 1;
+}
+
+
+.login-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.main-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.home-description {
+    padding: 4rem;
+}
+
+.description-tittle {
+    margin-bottom: 0.8rem;
+    color: #303841;
+
+}
+
+.description-tittle>span {
+    color: #ffee00;
+}
+
+.right-container img {
+    width: 500px;
+}
+
+.description-para {
+    padding-right: 2rem;
+    width: 700px;
+    text-align: justify;
+    color: #000000;
+    font-weight: 500;
+    margin-bottom: 2rem;
+}
+
+.home-description a {
+    background-color: #ffee00;
+    text-decoration: none;
+    color: #3c434ad4;
+    padding: 0.6rem;
+    font-weight: 700;
+    border-radius: 6px;
+}
+
+.signup-login-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 10rem;
+    
+}
+
+.signup-login-container {
+    width: 400px;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+    padding: 4rem;
+    border-radius: 5px;
+    color: #303841;
+
+}
+
+.signup-login-container form {
+    display: flex;
+    flex-direction: column;
+    color: #5e5d5d;
+}
+
+.signup-login-container h2{
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.signup-login-container input
+{
+    height: 1.8rem;
+    border: 1px solid #d1d0d0;
+    border-radius: 3px;
+}
+
+.signup-login-container input:focus
+{
+    outline: none;
+}
+
+.password-input, .name-input, .email-input
+{
+    margin-bottom: 1rem;
+}
+
+.signup-login-container > form > button
+{
+    margin-top: 1rem;
+    border: none;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    border-radius: 3px;
+    background-color: #ffee00;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.signup-login-container > p{
+    font-size: 0.8rem;
+}
+
+.signup-login-container > p > a{
+    text-decoration: none;
+    color: #303841;
+    font-weight: 700;
+}
+
+.signup-login-container > p > a:hover
+{
+    color: #000000;
+}

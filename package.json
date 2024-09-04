@@ -1,0 +1,23 @@
+{
+  "name": "notes-app",
+  "version": "1.0.0",
+  "description": "Notes Taking App",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon app.js"
+  },
+  "author": "Subramanya Talli",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "cookie-parser": "^1.4.6",
+    "ejs": "^3.1.10",
+    "express": "^4.19.2",
+    "jsonwebtoken": "^9.0.2",
+    "method-override": "^3.0.0",
+    "nodemon": "^3.1.4",
+    "path": "^0.12.7",
+    "uuid": "^10.0.0",
+    "validator": "^13.12.0"
+  }
+}

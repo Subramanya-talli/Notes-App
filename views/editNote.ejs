@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/6332efefc1.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/Css/style.css">
+    <title>Notes-app</title>
+</head>
+
+<body>
+    <main>
+        <nav>
+            <a href="/" class="web-title">Take A Note</a>
+        </nav>
+        <h1 class="new-note-title">Update note</h1>
+        <section class="container">
+            <a href="/users" class="back-btn">Back</a>
+            <form action="/users/update/<%= note._id %>?_method=PUT" method="POST" class="create-new-note">
+                <input type="text" name="title" value="<%= note.title %>" required>
+                <textarea name="description" id="description"  class="description" required><%= note.description %></textarea>
+                <button type="submit" class="update-btn">Upadte</button>
+            </form>
+        </section>
+        
+    </main>
+</body>
